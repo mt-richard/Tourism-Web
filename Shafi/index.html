@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism | Travel</title>
+
+    <link rel="stylesheet" href="css/fontawesome-free-5.15.3-web/css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- Header Section Starts-->
+<header>
+    <a href="#" class="logo"><i class="fa fa-safari"></i>Hanta</a>
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#dishes">Recent Trip</a>
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#order">Book now</a>
+    </nav>
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a title="Login for access the system" href="#" class="fas fa-user"></a>
+    </div>
+    <a onclick="openForm()" class="login" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  href="#">login</a>
+    <a onclick="signupForm()" class="login" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal"  href="#">Sign Up</a>
+
+</header>
+<!-- Header Section E nds-->
+
+
+
+
+<!--Search Form-->
+    <form action="" id="search-form">
+        <input type="search" id="search-box" placeholder="Search here .......">
+        <span><i class="fas fa-search"></i></span>
+        <i class="fas fa-times" id="close"></i>
+    </form>
+
+
+<!-- SLide Show-->
+
+    <section class="home" id="home">
+        <div class="home-slider">
+            <div class="wrapper">
+                <div class="myslides slide">
+                    <div class="content">
+                        
+                        <h3>Trip with hanta</h3>
+                        <p>hanta is a tour company aimed at transforming ordinary trips into extraordinary ones. Wherever you wish to travel, Kimomo Safaris is on your side to make your trip a memorable travel. </p>
+                        <a href="#order" class="btnz">order now</a>
+                    </div>
+
+                    <div class="image">
+                       
+                    </div>
+                </div>
+
+                
+
+            </div>
+
+           
+            
+        </div>
+    </section>
+    <!--
+    <div class="popup modal fade" id="login exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        
+        <h3 class="sub-heading">login here</h3>
+               <form action="userin.html">
+                <div class="input">
+                    <span>your usernamname</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <div class="input">
+                    <span>your password</span>
+                    <input type="text" placeholder="enter your name">
+                </div>
+                <input type="submit" value="Login as Client" class="btnz">
+                <input type="submit" value="Login as Admin" class="btnz">
+                    </form>
+-->
+        <style>
+            .form-popup {
+  display: none;
+  position: absolute;
+  top: 10%;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+label{
+    font-size: 1.4rem;
+}
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #2d3549;
+  color: white;
+  padding: 13px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: .3rem;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: #eecd12;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+        </style>
+
+<div class="form-popup" id="myForm">
+    <form action="#" method= "post" class="form-container">
+      <h1 style="padding: 2rem;">Login here</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn"><a href="index.html" style="color: #fff;">Login as Client</a></button>
+      <button type="submit" class="btn"><a href="admin/index.html" style="color: #fff;">Login as Admin</a></button>
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+   <div class="form-popup" id="myForm1">
+    <form action="#" method= "post" class="form-container">
+      <h1 style="padding: 2rem;">Create Account</h1>
+  
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+      <label for="email"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <button type="submit" class="btn"><a href="index.html" style="color: #fff;">Create Acount</a></button>
+     
+      <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+    </form>
+  </div>
+                    <script>
+                        function openForm() {
+                                document.getElementById("myForm").style.display = "block";
+                                document.getElementById("myForm1").style.display = "none";
+                                }
+                                function signupForm() {
+                                document.getElementById("myForm1").style.display = "block";
+                                document.getElementById("myForm").style.display = "none";
+                                }
+
+                                function closeForm() {
+                                document.getElementById("myForm").style.display = "none";
+                                document.getElementById("myForm1").style.display = "none";
+                                }
+                    </script>
+  </div>
+</div>
+
+
+
+    </div>
+ <!--Trips we mage ..... starts-->
+    <section class="dishes" id="dishes">
+        <h3 class="sub-heading">Places to travel</h3>
+        <h1 class="heading" style="text-transform: none;"> Popular places to travel</h1>
+
+        <div class="box-container">
+
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/akagera1.jpg" alt="">
+                <h3>Akagera Trip </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+           
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/akagera.jpg" alt="">
+                <h3>West akagera trip </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/Canopy.jpg" alt="">
+                <h3>nyungwe canopy </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/kivu.jpg" alt="">
+                <h3>kivu island </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/river.jpg" alt="">
+                <h3>rivers</h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+            <div class="box">
+                <a href="" class="fas fa-heart"></a>
+                <a href="" class="fas fa-eye"></a>
+                <img src="images/volcano.jfif" alt="">
+                <h3>volcano </h3>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, omnis a. Blanditiis nostrum sapiente excepturi placeat aspernatur enim iusto et? Beatae iusto, deserunt ipsum fuga enim odio fugiat illum veritatis.</p>
+               
+                <a href="#" class="btnz">request quotation</a>
+            </div>
+
+            
+            
+        </div>
+    </section>
+
+<!-- Trips ends-->
+
+<!-- About us section starts-->
+
+    <section id="about" class="about">
+        <h3 class="sub-heading"> about us </h3>
+        <h1 class="heading"> why choose us?</h1>
+
+        <div class="row">
+            <div class="image">
+                <img src="images/tent.jpg" alt="">
+            </div>
+
+            <div class="content">
+                <h3>who we are ?</h3>
+       -         <p>Our destinations and experiences are incredibly unique, have a strong focus on nature, and will not only stimulate and entertain but will provide total indulgence. From the Volcanoes mountains to the beautiful landscape of Rwanda and its unique culture Rwanda is a country with incredible diversity and most beautiful wild places.</p>
+                <p>You will encounter dramatic wildlife spectacles like great Mountain Gorillas in their natural habitat which are found in Virunga massive in worldwide. We are confident in our ability to go above and beyond your safari expectations and to reveal your adventure of a lifetime.</p>
+                <div class="icons-container">
+                    
+                </div>
+                <a href="#" class="btnz">learn more</a>
+            </div>
+        </div>
+    </section>
+
+<!-- Menu section starts-->
+
+<section id="menu" class="menu">
+    <h3 class="sub-heading"> our menu </h3>
+    <h1 class="heading" style="text-transform: none;"> Choose your Tour Package</h1>
+
+    <div class="box-container">
+        <div class="box">
+            <div class="image">
+                <img src="images/akagera.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <h3>Tour in Akagera n park</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                <a href="#order" class="btnz">book now</a>
+                <span class="price">$22.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/Canopy.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>canopy way</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$32.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/river1.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>beyond the river</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$23.99</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/Canopy2.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>Tour in nyungwe park</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$32.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/lion.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>lion zone</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$52.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/elephant.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>elephant  park</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$45.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/canopy1.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>Forest travel</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 1 person</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$18.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/summer.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>summer trip</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 3 person(s)</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$12.99</span>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/summer1.jpg" alt="">
+                <a href="" class="fas fa-heart"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+               <h3>Summer trip</h3>
+                <ul>
+                    <li><b>Accomodation:</b> No accomodation</li>
+                    <li><b>Days:</b> 3 days</li>
+                    <li><b>People:</b> 2 person(s)</li>
+                    <li><b>Highlights:</b> Zebras, Giraffes, Elephants</li>
+                </ul>
+                
+                 <a href="#order" class="btnz">book now</a>
+                <span class="price">$19.99</span>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+<!-- Review section starts-->
+<!--<section id="review" class="review">
+
+    <h3 class="sub-heading"> customer's review </h3>
+    <h1 class="heading"> what they say</h1>
+
+    <div class="review-slider">
+        <div class="wrapper">
+            <div class="slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-1.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non numquam obcaecati exercitationem impedit. Voluptatum asperiores maiores nisi sunt, quos laboriosam accusantium perferendis culpa, aliquid eaque alias minima error natus consectetur.</P>
+            </div>
+
+            <div class="slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-2.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non numquam obcaecati exercitationem impedit. Voluptatum asperiores maiores nisi sunt, quos laboriosam accusantium perferendis culpa, aliquid eaque alias minima error natus consectetur.</P>
+            </div>
+
+            <div class="slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/pic-3.png" alt="">
+                    <div class="user-info">
+                        <h3>john deo</h3>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non numquam obcaecati exercitationem impedit. Voluptatum asperiores maiores nisi sunt, quos laboriosam accusantium perferendis culpa, aliquid eaque alias minima error natus consectetur.</P>
+            </div>
+
+
+        </div>
+    </div>
+</section>-->
+
+
+<!-- Order Section section starts-->
+
+<section id="order" class="order">
+
+    <h3 class="sub-heading"> order now </h3>
+    <h1 class="heading"> free and fast</h1>
+
+    <form action="">
+
+        <div class="inputbox">
+            <div class="input">
+                <span>your name</span>
+                <input type="text" placeholder="enter your name">
+            </div>
+            <div class="input">
+                <span>your number</span>
+                <input type="text" placeholder="enter your number">
+            </div>
+        </div>
+
+        <div class="inputbox">
+            <div class="input">
+                <span>your order</span>
+                <input type="text" placeholder="enter tour package">
+            </div>
+            <div class="input">
+                <span>additonal drinks</span>
+                <input type="text" placeholder="extra with drinks">
+            </div>
+        </div>
+
+        <div class="inputbox">
+            <div class="input">
+                <span>how much</span>
+                <input type="number" placeholder="how many orders">
+            </div>
+            <div class="input">
+                <span>date and time</span>
+                <input type="datetime-local" >
+            </div>
+        </div>
+
+        <div class="inputbox">
+            <div class="input">
+                <span>your address</span>
+                <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+            </div>
+            <div class="input">
+                <span>your message</span>
+                <textarea name="" placeholder="enter message" id="" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <input type="submit" value="order now" class="btnz">
+
+    </form>
+
+</section>
+
+
+<!-- Footer Section section starts-->
+
+
+
+<section class="footer" style="background-color: #2d3549;">
+    <div class="box-container">
+
+        <div class="box">
+            <h3>our branches</h3>
+            <a href="">rwanda</a>
+            <a href="">kenya</a>
+            <a href="">india</a>
+            <a href="">russia</a>
+            <a href="">germany</a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+        <a href="#home">home</a>
+        <a href="#dishes">Recent Trip</a>
+        <a href="#about">about</a>
+        <a href="#menu">menu</a>
+        <a href="#review">review</a>
+        <a href="#order">book now</a>
+
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <a href="#">(+250)-787-654-212</a>
+            <a href="#">(+250)-787-654-212</a>
+            <a href="#">mbanzatrichard@gmail.com</a>
+            <a href="#">richard@festimoltd.com</a>
+            <a href="#">Kigali, Remera - kg 108 st</a>
+        </div>
+
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="#">facebook</a>
+            <a href="#">instagram</a>
+            <a href="#">twitter</a>
+            <a href="#">linkedin</a>
+            
+        </div>
+    </div>
+    <div class="credit"> copyright @ 2021 by <span>richard.</span></div>
+
+</section>
+
+
+<!-- loader part-->
+<!-- 
+<div class="loader-container">
+    <img src="images/loader.gif" alt="">
+</div>
+-->
+
+
+
+
+    <script src="assets/app.js"></script>
+  
+</body>
+</html>
